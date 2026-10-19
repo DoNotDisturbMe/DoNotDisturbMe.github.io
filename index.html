@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prince Kumar · DevOps & Kubernetes Engineer</title>
+<meta name="description" content="Prince Kumar, Top Rated DevOps & Kubernetes engineer. CI/CD pipelines, AWS EKS and Azure AKS with Terraform, monitoring, cloud migrations. Book a free 15-minute call.">
+<meta property="og:title" content="Prince Kumar · DevOps & Kubernetes Engineer">
+<meta property="og:description" content="CI/CD, Kubernetes (EKS/AKS), Terraform, monitoring and cloud migrations. Book a free 15-minute call.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f8fb; --surface:#ffffff; --text:#0f172a; --muted:#5b6475; --line:#e3e7ef;
+  --accent:#0b6bcb; --accent-ink:#ffffff; --accent-soft:#e6f0fb; --good:#127a4a;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --bg:#0b1020; --surface:#121a2e; --text:#e8ecf5; --muted:#9aa5bb; --line:#22304d;
+         --accent:#4ea1ff; --accent-ink:#06101f; --accent-soft:#132744; --good:#4cd38f; }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;font-size:17px}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;color:var(--text)}
+.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:22px;align-items:center}
+.navlinks a{color:var(--muted);font-weight:500;font-size:15px}
+.navlinks a:hover{color:var(--text)}
+.navlinks a.btn-primary,.navlinks a.btn-primary:hover{color:var(--accent-ink);padding:9px 16px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid transparent;transition:transform .15s ease,opacity .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-ghost{border-color:var(--line);color:var(--text);background:var(--surface)}
+.hero{padding-top:80px;padding-bottom:64px}
+.badge{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:600;color:var(--good);background:color-mix(in srgb,var(--good) 12%,transparent);padding:6px 12px;border-radius:99px;margin-bottom:22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--good)}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.08;letter-spacing:-.035em;font-weight:800;max-width:860px}
+h1 em{font-style:normal;color:var(--accent)}
+.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:680px;margin:22px 0 32px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.trust{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;color:var(--muted);font-size:14px}
+.trust b{color:var(--text);font-size:22px;display:block;letter-spacing:-.02em}
+section{padding:64px 0;border-top:1px solid var(--line)}
+.eyebrow{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(26px,3.4vw,36px);letter-spacing:-.025em;line-height:1.15;margin-bottom:28px;max-width:720px}
+.grid{display:grid;gap:18px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px}
+.card h3{font-size:19px;letter-spacing:-.01em;margin-bottom:8px}
+.card p{color:var(--muted);font-size:15.5px}
+.big{font-size:40px;font-weight:800;letter-spacing:-.03em;color:var(--accent);line-height:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-family:"JetBrains Mono",monospace;font-size:12px;padding:4px 9px;border-radius:6px;background:var(--accent-soft);color:var(--accent)}
+.price{font-size:15px;color:var(--muted);margin-top:14px}
+.price b{font-size:24px;color:var(--text)}
+ul.check{list-style:none;margin-top:12px}
+ul.check li{padding-left:24px;position:relative;color:var(--muted);font-size:15px;margin:6px 0}
+ul.check li:before{content:"✓";position:absolute;left:0;color:var(--good);font-weight:700}
+.timeline .card{display:grid;grid-template-columns:200px 1fr;gap:18px}
+.when{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--muted)}
+.role{font-weight:700}
+.steps{counter-reset:s}
+.steps .card{position:relative;padding-top:56px}
+.steps .card:before{counter-increment:s;content:counter(s);position:absolute;top:22px;left:26px;width:26px;height:26px;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-weight:700;font-size:14px;display:grid;place-items:center}
+.contact{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:40px;display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center}
+.clist{display:grid;gap:12px}
+.clist a{display:flex;gap:12px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:12px;color:var(--text);font-weight:500;background:var(--bg)}
+.clist a:hover{border-color:var(--accent)}
+.clist small{display:block;color:var(--muted);font-weight:400;font-size:13px}
+.ico{width:36px;height:36px;border-radius:9px;background:var(--accent-soft);display:grid;place-items:center;flex:none}
+.ico svg{width:18px;height:18px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+footer{padding:36px 0;color:var(--muted);font-size:14px;text-align:center}
+@media (max-width:760px){
+  .navlinks a:not(.btn){display:none}
+  .timeline .card{grid-template-columns:1fr;gap:6px}
+  .contact{grid-template-columns:1fr;padding:26px}
+  .hero{padding-top:56px;padding-bottom:44px}
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#">prince<span>.</span>devops</a>
+    <div class="navlinks">
+      <a href="#services">Services</a>
+      <a href="#results">Results</a>
+      <a href="#experience">Experience</a>
+      <a class="btn btn-primary" href="#contact">Book a call</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="badge"><span class="dot"></span>Available for new projects</div>
+    <h1>I build and run <em>Kubernetes, CI/CD and cloud</em> infrastructure, so your team can ship faster.</h1>
+    <p class="lead">Hi, I'm Prince Kumar, a DevOps / SRE engineer working with AWS, Azure, Terraform and Kubernetes. I take messy, manual infrastructure and make it automated, monitored and documented.</p>
+    <div class="cta">
+      <a class="btn btn-primary" href="#contact">Book a free 15-min call</a>
+      <a class="btn btn-ghost" href="#services">See services & prices</a>
+    </div>
+    <div class="trust">
+      <div><b>Top Rated</b>on Upwork</div>
+      <div><b>100%</b>Job Success Score</div>
+      <div><b>18.8 TB</b>migrated, zero data loss</div>
+      <div><b>60%</b>faster provisioning</div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="eyebrow">Services</div>
+      <h2>Fixed-price packages, or hourly for ongoing work</h2>
+      <div class="grid g3">
+        <div class="card">
+          <h3>CI/CD pipeline to Kubernetes</h3>
+          <p>Automatic build, test and deploy on every push, with staging, production and safe rollbacks.</p>
+          <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span><span class="tag">Jenkins</span><span class="tag">Helm</span><span class="tag">ArgoCD</span></div>
+          <div class="price">from <b>$150</b></div>
+        </div>
+        <div class="card">
+          <h3>EKS / AKS cluster with Terraform</h3>
+          <p>A production-ready Kubernetes cluster as code: networking, node groups, ingress, TLS, autoscaling and RBAC.</p>
+          <div class="tags"><span class="tag">Terraform</span><span class="tag">AWS EKS</span><span class="tag">Azure AKS</span><span class="tag">NGINX</span></div>
+          <div class="price">from <b>$250</b></div>
+        </div>
+        <div class="card">
+          <h3>Monitoring & alerting</h3>
+          <p>Prometheus and Grafana dashboards for servers, Kubernetes and databases, with alerts to Slack or email.</p>
+          <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">VictoriaMetrics</span><span class="tag">ELK</span></div>
+          <div class="price">from <b>$120</b></div>
+        </div>
+        <div class="card">
+          <h3>Cloud migration & disaster recovery</h3>
+          <p>Move from Heroku, VPS or another cloud, or from cloud to on-prem, with tested backups and a rollback plan.</p>
+          <div class="tags"><span class="tag">Velero</span><span class="tag">Kopia</span><span class="tag">MinIO</span><span class="tag">AWS</span><span class="tag">Azure</span></div>
+          <div class="price">quote after a free call</div>
+        </div>
+        <div class="card">
+          <h3>Cloud cost reduction</h3>
+          <p>Find and remove waste in your AWS or Azure bill: rightsizing, unused resources, autoscaling and reservations.</p>
+          <div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">FinOps</span></div>
+          <div class="price">quote after a free call</div>
+        </div>
+        <div class="card">
+          <h3>Monthly DevOps support</h3>
+          <p>An on-call DevOps engineer for your team: patching, monitoring, deploys, incidents and improvements each month.</p>
+          <div class="tags"><span class="tag">Linux</span><span class="tag">Kubernetes</span><span class="tag">Security</span></div>
+          <div class="price">from <b>$800</b>/month</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="wrap">
+      <div class="eyebrow">Results</div>
+      <h2>Production work I've delivered</h2>
+      <div class="grid g3">
+        <div class="card">
+          <div class="big">18.8 TB</div>
+          <h3 style="margin-top:12px">Zero-data-loss Kubernetes migration</h3>
+          <p>Moved 37 persistent volumes (Elasticsearch, Kafka, PostgreSQL, Redis, Camunda 8) from Azure AKS to on-premises with Velero, Kopia, MinIO and VolSync, following a fully scripted, repeatable runbook.</p>
+        </div>
+        <div class="card">
+          <div class="big">1 view</div>
+          <h3 style="margin-top:12px">Central monitoring for many clusters</h3>
+          <p>Built a VictoriaMetrics + Grafana platform that collects metrics and logs from multiple production Kubernetes clusters, plus a reusable Helm chart that monitors 6 database types.</p>
+        </div>
+        <div class="card">
+          <div class="big">60%</div>
+          <h3 style="margin-top:12px">Faster infrastructure provisioning</h3>
+          <p>Replaced manual setup with Terraform and Ansible modules, and built Jenkins + Helm pipelines that deploy multi-service apps to Azure AKS reliably.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">How we work</div>
+      <h2>Simple, transparent and documented</h2>
+      <div class="grid g3 steps">
+        <div class="card"><h3>Free 15-minute call</h3><p>You explain your setup and goal. I tell you honestly what I'd do and whether I'm the right fit.</p></div>
+        <div class="card"><h3>Clear plan & fixed price</h3><p>You get a written scope, timeline and price, with milestones for bigger projects.</p></div>
+        <div class="card"><h3>Build, handover, support</h3><p>Daily updates while I work, then runbooks and a walkthrough so your team owns everything.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="eyebrow">Experience</div>
+      <h2>Where I've worked</h2>
+      <div class="grid timeline">
+        <div class="card"><div class="when">May 2025 – Present</div><div><div class="role">DevOps Engineer · Infiniatechnologies, Noida</div><p style="color:var(--muted);font-size:15px">Kubernetes platforms on AKS and on-prem, central monitoring, Jenkins/Helm CI/CD, PostgreSQL automation, an 18.8 TB disaster-recovery migration, Camunda 8 and ClickHouse.</p></div></div>
+        <div class="card"><div class="when">Mar 2025 – May 2025</div><div><div class="role">Cloud Engineer · TOL, Noida</div><p style="color:var(--muted);font-size:15px">AKS and EKS clusters, Terraform and Ansible modules, GitLab administration, Azure networking and RBAC, and core AWS services.</p></div></div>
+        <div class="card"><div class="when">Feb 2024 – Feb 2025</div><div><div class="role">Junior DevOps Engineer · ERP Consulting, Pune</div><p style="color:var(--muted);font-size:15px">Docker, EKS/AKS, Helm, Prometheus/Grafana, SSO (Okta, Auth0, Keycloak), Vault, and SOC 2 / GDPR / ISO 27001 practices.</p></div></div>
+      </div>
+      <div class="card" style="margin-top:18px">
+        <h3>Tools I use every day</h3>
+        <div class="tags">
+          <span class="tag">Kubernetes</span><span class="tag">Docker</span><span class="tag">Helm</span><span class="tag">Terraform</span><span class="tag">Ansible</span><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span><span class="tag">ArgoCD</span><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">VictoriaMetrics</span><span class="tag">ELK</span><span class="tag">Vault</span><span class="tag">Keycloak</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2 style="margin-bottom:14px">Let's talk about your infrastructure</h2>
+          <p style="color:var(--muted)">Send me a short note about your setup (cloud, Kubernetes, CI/CD) and what you want to fix. I reply within a few hours, usually the same day. Based in India (IST), with overlap with UK/EU business hours and US mornings.</p>
+          <div class="cta" style="margin-top:24px">
+            <a class="btn btn-primary" href="mailto:kmprince15932@gmail.com?subject=Free%2015-min%20DevOps%20call&body=Hi%20Prince%2C%0A%0AMy%20setup%3A%20%0AWhat%20I%20need%20help%20with%3A%20%0AA%20good%20time%20for%20a%20call%3A%20">Request a free 15-min call</a>
+          </div>
+        </div>
+        <div class="clist">
+          <a href="mailto:kmprince15932@gmail.com"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span>kmprince15932@gmail.com<small>Email</small></span></a>
+          <a href="https://wa.me/918081366401" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12Z"/></svg></span><span>+91 80813 66401<small>WhatsApp / phone</small></span></a>
+          <a href="https://www.linkedin.com/in/kmprincekumar" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg></span><span>linkedin.com/in/kmprincekumar<small>LinkedIn</small></span></a>
+          <a href="https://www.upwork.com/freelancers/~018177b36d66e3621e" target="_blank" rel="noopener"><span class="ico"><svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m9 12 2 2 4-4"/></svg></span><span>Hire me on Upwork<small>Top Rated · 100% Job Success</small></span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="y">2026</span> Prince Kumar · DevOps & Kubernetes Engineer · Noida, India</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
